@@ -1,0 +1,17 @@
+<div class="col-md-4 col-sm-6">
+	<div class="wheather-tab row" style="margin: 10px 0;">
+		<p class="date">{{ getDate() | date: "dd.MM.yyyy"}}</p>
+		<div class="col-xs-6">
+			<p>Утро: {{ day.temp.eve | temp}},<br />
+			 День: {{ day.temp.day | temp}},<br />
+			 Вечер: {{ day.temp.morn | temp}},<br />
+			 Ночь: {{ day.temp.night | temp}},<br /><br />
+			 
+			 
+			 Ветер: {{ day.wind }} <img class="arrow" src="img/arrow.png" style="transform: rotate(-{{ day.deg }}deg);"></p>
+		</div>
+		<div class="col-xs-6">
+			<weather-icon sky="{{ day.sky }}"></weather-icon>
+		</div>
+	</div>
+</div>

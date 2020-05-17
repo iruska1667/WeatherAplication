@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="css/user.css">
+	<title>pogoda</title>
+</head>
+<body>
+	<div class="container">
+		<div ng-app="myapp" ng-controller="WeatherCtrl">
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-4">
+					<h3>wybierz miasto:</h3>
+					<input type="text" class="form-control" ng-change="cities()" ng-model="city" id="city" list="cities_list" placeholder='na przyklad "Moskwa"'>
+					<datalist id="cities_list">
+						<cities-title ng-repeat="citytitle in citytitle.title" citytitle="citytitle"></cities-title>
+					</datalist>
+					<p>pokaz prognoze pogody
+					<select class="form-control" id="countDays">
+							  <option>1</option>
+							  <option>2</option>
+							  <option>3</option>
+							  <option>4</option>
+							  <option>5</option>
+							  <option selected>6</option>
+							  <option>7</option>
+					</select>
+					dni</p>
+					<button class="btn btn-default" ng-click="load()">Pokaz</button>
+				</div>
+			</div>
+			<h2 class="city">{{ weather.city }}</h2>
+			<weather-day ng-repeat="day in weather.days" day="day"></weather-day>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/angular.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controller.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+
+</body>
+</html>

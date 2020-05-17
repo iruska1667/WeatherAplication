@@ -1,0 +1,57 @@
+body {
+	background: #fff url(../img/bg.jpg) no-repeat center center;
+	background-size: cover;
+	padding: 50px 0;
+}
+
+#city {
+	margin: 20px 0;
+}
+
+.btn {
+	display: block;
+	margin: 10px auto 20px;
+}
+
+#countDays {
+	display: inline-block;
+	width: auto;
+	padding: 2px;
+	margin: 0 10px;
+}
+
+.date {
+	font-weight: bold;
+	text-align: center;
+	margin: 10px 0;
+}
+.city {
+	text-align: center;
+}
+
+.wheather-tab {
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #a3a3a3;
+	transition: all 0.3s ease 0s;
+}
+
+.wheather-tab:hover {
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.icon {
+	width: 50px;
+	margin: 0 auto;
+	display: block;
+	margin-top: 20px;
+}
+
+.arrow {
+	width: 20px;
+}
+
+.container {
+	background: rgba(255,255,255,0.6);
+	border-radius: 5px;
+}
